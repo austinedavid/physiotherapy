@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(15, 13, 13);
+}
+.container{
+    width: 100%;
+    min-height: 109vh;
+    background-image: radial-gradient( rgb(59, 49, 49), black);
+}
+.logo-div img{
+    width: 5rem;
+    aspect-ratio: 1;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav-menu ul{
+    display: flex;
+    gap: var(--gap, 1.5rem);
+    list-style: none;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+   font-weight: 700;
+   color: white;
+}
+.nav-menu ul li a:hover{
+    color: rgb(100, 100, 153);
+}
+.toggle-btn{
+    display: none;
+}
+/*welcome page of the site*/
+.welcome-page{
+    width: 80%;
+    min-height: 60vh;
+    margin: 4rem auto;
+  
+  text-align: center;
+  padding: 2rem;
+
+}
+.welcome-page h3{
+    font-size: 3rem;
+    color: rgb(139, 129, 129);
+    margin-bottom: 3rem;
+}
+.welcome-page p{
+    font-size: 2rem;
+    color: white;
+    font-style: italic;
+}
+/*the second part of the site*/
+.container-2{
+    width: 100%;
+    min-height: 80vh;
+    background-image: url(physio-image1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+   
+    
+}
+.container-2 .content{
+    width: 60%;
+    min-height: 60vh;
+    
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3rem;
+
+}
+.container-2 .content h2{
+    text-align: center;
+    margin-top: 1.2rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+.container-2 .content p{
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.container-2 .content ul{
+    margin-left: 1.4rem;
+    list-style-type: square;
+    font-size: 1.3rem;
+    color: #fff;
+    gap: 1rem;
+}
+.container-2 .content ul li{
+    line-height: 2.5rem;
+}
+.part-3{
+    min-height: 90vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr
+}
+.card-container .card{
+    width: 15rem;
+    aspect-ratio: 1;
+    background-image: linear-gradient(to right, red, yellow);
+    margin: 0.5rem;
+    text-align: center;
+    transition: 0.5s ease-out;
+    border-radius: 1.5rem;
+}
+.card-container .card:hover{
+    transform: scale(1.098);
+    transition: 0.5s ease-out;
+}
+.card-container .card h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: black;
+    margin-bottom: 2rem;
+}
+.card-container .card h2{
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+  color: black;
+  margin-bottom: 2rem;
+}
+.card-container .card a{
+text-decoration: none;
+color: white;
+background: #5A3F37;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+padding: 1.3rem;
+border-radius: 1rem;
+}
+.card-container .card a:hover{
+color: red;
+}
+
+
+/*for responsive moblie*/
+@media (max-width: 40rem){
+    .nav-menu-list{
+        position: fixed;
+        flex-direction: column;
+        inset: 0 0 0 30%;
+        padding: 7rem 2rem;
+        background: rgba(0, 0, 0, 0.7);
+        transform: translateX(100%);
+        transition: 1s ease-out;
+        
+    }
+
+    .nav-menu-list[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    /*WELCOME PAGE OF THE SITE*/
+    
+    /*for button to toggle*/
+    .toggle-btn{
+        display: block;
+        position: absolute;
+        width: 2rem;
+        aspect-ratio: 1;
+        background-image: url(bug.png);
+        background-position: center;
+        background-size: cover;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;
+      
+    }
+    .toggle-btn[aria-expanded="true"]{
+        background-image: url(bugerclose.png);
+    }
+
+    .container-2 .content ul{
+        margin-left: 1.4rem;
+        list-style-type: square;
+        font-size: 1rem;
+        color: #fff;
+        gap: 1rem;}
+        .container-2 .content ul li{
+            line-height: 2rem;
+        }
+
+        .card-container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+}
